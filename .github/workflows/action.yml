@@ -38,3 +38,19 @@ jobs:
           # . /opt/intel/oneapi/setvars.sh
           mpiifx -o hello_mpi_fortran hello_mpi.f90
           mpirun -np 2 ./hello_mpi_fortran
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Run the action
+        uses: ./
+
+      - name: Verify compilers
+        run: |
+          icpx --version
+          ifx --version
+          mpiicx --version
+          mpiifx --version

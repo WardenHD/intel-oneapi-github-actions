@@ -52,5 +52,3 @@ jobs:
         run: |
           icpx --version
           ifx --version
-          mpiicx --version
-          mpiifx --version

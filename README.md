@@ -9,6 +9,8 @@ Use this template for all the Intel(R) oneAPI components inside your Github acti
     components: 'fortran,cpp,mpi,mkl'
 ```
 
+Then use compiler commands throughout workflow, changes to the environment made by `setvars.sh` script are persisted
+
 ## Inputs
 
 | Input | Required | Default value | Description |
